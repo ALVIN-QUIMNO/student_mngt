@@ -26,7 +26,7 @@
 
                 <div class="card-body">
                     <table class="table table-bordered table-striped fs-6 text-black">
-                        <thead>
+                        <thead style="text-align: center;">
                             <tr>
                                 <th>ID</th>
                                 <th>First Name</th>
@@ -35,11 +35,10 @@
                                 <th>Age</th>
                                 <th>Address</th>
                                 <th>Zip</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Action</th>                         
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody style="text-align: center;">
                             @foreach ($students as $items)
                                 <tr>
                                     <td>{{ $items->id }}</td>
@@ -53,12 +52,12 @@
                                         <a href="{{ route('student.edit', $items->id) }}" class="btn btn-success">
                                             Edit
                                         </a>
-                                    </td>
-                                    <td>
                                         <a href="{{ route('student.delete', $items->id) }}" class="btn btn-danger">
                                             Delete
                                         </a>
+                                    
                                     </td>
+                                    
                                 </tr>
                             @endforeach
                         </tbody>
