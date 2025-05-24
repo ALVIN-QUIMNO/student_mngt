@@ -8,10 +8,16 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
+
+    <!-- Font Awesome (locally hosted) -->
     <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
-    <!-- Theme style -->
+
+    <!-- AdminLTE CSS -->
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+
+    <!-- Laravel Vite CSS -->
+    @vite(['resources/css/app.css'])
+
     @yield('styles')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -34,16 +40,14 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" style="left: inherit; right: 0px;">
                     <a href="{{ route('profile.show') }}" class="dropdown-item">
-                        <i class="mr-2 fas fa-file"></i>
-                        {{ __('My profile') }}
+                        <i class="mr-2 fas fa-user"></i> {{ __('My profile') }}
                     </a>
                     <div class="dropdown-divider"></div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a href="{{ route('logout') }}" class="dropdown-item"
                            onclick="event.preventDefault(); this.closest('form').submit();">
-                            <i class="mr-2 fas fa-sign-out-alt"></i>
-                            {{ __('Log Out') }}
+                            <i class="mr-2 fas fa-sign-out-alt"></i> {{ __('Log Out') }}
                         </a>
                     </form>
                 </div>
@@ -73,7 +77,6 @@
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
         <div class="p-3">
             <h5>Title</h5>
             <p>Sidebar content</p>
@@ -83,21 +86,19 @@
 
     <!-- Main Footer -->
     <footer class="main-footer">
-        <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
             Anything you want
         </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <strong>&copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
     </footer>
 </div>
 <!-- ./wrapper -->
 
-<!-- REQUIRED SCRIPTS -->
-
-@vite('resources/js/app.js')
-<!-- AdminLTE App -->
+<!-- AdminLTE JS (deferred) -->
 <script src="{{ asset('js/adminlte.min.js') }}" defer></script>
+
+<!-- Laravel Vite JS -->
+@vite(['resources/js/app.js'])
 
 @yield('scripts')
 </body>
