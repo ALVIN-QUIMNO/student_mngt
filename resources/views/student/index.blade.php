@@ -36,6 +36,9 @@
                                 <th>Address</th>
                                 <th>Zip</th>
                                 <th>Action</th>    
+                                                     
+                            </tr>
+                            <tr>
                                 <th>ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
@@ -43,7 +46,8 @@
                                 <th>Age</th>
                                 <th>Address</th>
                                 <th>Zip</th>
-                                <th>Action</th>                                              
+                                <th>Action</th>    
+                                                     
                             </tr>
                         </thead>
                         <tbody style="text-align: center;">
