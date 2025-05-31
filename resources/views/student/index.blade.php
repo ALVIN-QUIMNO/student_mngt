@@ -22,9 +22,6 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Students List</h3>
-                    <h1>Alvin quimno</h1>
-                    <p>di ko alam kung bagsak ako dun, pero nakapaglogin naman ako at gumana nama
-                        n yung employee management, pero daming nazero kasi di sila makapag php artisan serve</p>
                 </div>
 
                 <div class="card-body">
@@ -38,7 +35,15 @@
                                 <th>Age</th>
                                 <th>Address</th>
                                 <th>Zip</th>
-                                <th>Action</th>                         
+                                <th>Action</th>    
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Middle Name</th>
+                                <th>Age</th>
+                                <th>Address</th>
+                                <th>Zip</th>
+                                <th>Action</th>                                              
                             </tr>
                         </thead>
                         <tbody style="text-align: center;">
